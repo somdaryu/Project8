@@ -10,13 +10,12 @@ public class Quiz2 {
 		list.add(new Employee("또치"));
 		
 		for(Person person : list) {
+			person.eat();
 			if(person instanceof Student) {
 				Student student = (Student)person;
-				student.eat();
 				student.study();
 			}else if(person instanceof Employee) {
 				Employee employee = (Employee)person;
-				employee.eat();
 				employee.work();
 			}
 		}
@@ -54,7 +53,6 @@ class Employee extends Person {
 
 	public Employee(String name) {
 		super(name);
-		// TODO Auto-generated constructor stub
 	}
 
 	public void work() {
